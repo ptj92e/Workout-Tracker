@@ -5,10 +5,10 @@ const opts = { toJSON: { virtuals: true }};
 const workoutSchema = new Schema({
     day: {
         type: Date,
-        default: Date.now()
+        default: Date.now
     },
     exercise: []
-}, opts)
+}, opts);
 
 const Workout = mongoose.model("Workout", workoutSchema);
 
