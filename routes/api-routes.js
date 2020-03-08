@@ -14,7 +14,7 @@ api_router.put("/api/workouts/:id", (req, res) => {
     db.Workout.findByIdAndUpdate(
         mongojs.ObjectId(req.params.id),
         {
-            $set: {
+            $push: {
                 exercises: req.body
             }
         },
