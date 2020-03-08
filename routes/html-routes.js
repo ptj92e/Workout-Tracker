@@ -1,6 +1,10 @@
 const html_router = require("express").Router();
 const path = require("path");
 
+html_router.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
+});
+
 html_router.get("/stats", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/stats.html"));
 });
